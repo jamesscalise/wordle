@@ -14,14 +14,6 @@ export default function Wordle({ solution }) {
 		[ handleKeyUp ]
 	);
 
-	useEffect(
-		() => {
-			console.log('is this logging?');
-			console.log(guesses, isCorrect, turn);
-		},
-		[ guesses, isCorrect, turn ]
-	);
-
 	return (
 		<div>
 			<div>

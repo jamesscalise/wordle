@@ -17,7 +17,11 @@ export default function Row({ guess, turn, currentGuess, key }) {
 		let guessArray = currentGuess.split('');
 		return (
 			<div className="row current">
-				{guessArray.map((letter, i) => <div key={i}>{letter}</div>)}
+				{guessArray.map((letter, i) => (
+					<div key={i} className="filled">
+						{letter}
+					</div>
+				))}
 				{[ ...Array(5 - guessArray.length) ].map((_, i) => <div key={i} />)}
 			</div>
 		);
